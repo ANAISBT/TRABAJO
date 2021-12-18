@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksgrupo1-5bf5"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksgrupo1-5bf5"
+  template:
+    metadata:
+      labels:
+        app: "aksgrupo1-5bf5"
+    spec:
+      containers:
+        - name: "aksgrupo1-5bf5"
+          image: "clusterprueba.azurecr.io/aksgrupo1"
+          ports:
+          - containerPort: 80
